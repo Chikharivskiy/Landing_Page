@@ -1,5 +1,113 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+@import "/css/fonts.css";
+@import "/css/grid.css";
+@import "/css/colors.css";
+@import "/css/interface.css";
+
+/* header */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
 }
-/*# sourceMappingURL=main.css.map */
+.navbar-wrap{
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    justify-content: space-between;
+}
+/* button */
+.menu-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid rgba(0,0,0,0.1);
+    border-left: 1px solid rgba(0,0,0,0.1);
+    height: 12vh;
+    width: 70px;
+    outline: none;
+    cursor: pointer;
+}
+.menu-button__line{
+    display: block;
+    height: 3px;
+    width: 20px;
+    background-color: #89a9eb;
+    margin: 2px 0;
+}
+/* menu */
+.menu{
+    position: fixed;
+    z-index: 0;
+    top: 80px;
+    left: 0;
+    padding: 16px 0;
+    width: 100%;
+    background-color: var(--primary);
+    transition: 0.4s;
+    transform: translateY(-100%);
+}
+.menu_active{
+    transform: translateY(0);
+}
+.menu__nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu__link{
+    text-transform: uppercase;
+    font-size: 17px;
+    text-decoration: none;
+    color: #ffffff;
+}
+/* navbar */
+.navbar__text{
+    display: block;
+    font-size: 18px;
+    font-family: 'Proxima Nova Semibold';
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.navbar__description{
+    display: block;
+    font-size: 14px;
+    color: var(--text-color-light);
+}
+.navbar__phone{
+    display: block;
+    font-size: 19px;
+    font-family: 'Proxima Nova Semibold';
+    text-decoration: none;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+.navbar__mobile, .navbar__landline{
+    text-align: right;
+}
+.navbar__small-text{
+    font-size: 14px;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+}
+/* hero */
+.hero{
+    background: #1f1f1f url('/img/rumyniya_gory_kamni_nebo_derevya_107346_1366x768.jpg') no-repeat center;
+    background-size: cover;
+    padding: 200px 0 270px 0;
+}
+.hero-title{
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.hero-subtitle{
+    display: block;
+    font-size: 30px;
+    font-family: 'Proxima Nova Semibold';
+    margin-bottom: 68px;
+}
