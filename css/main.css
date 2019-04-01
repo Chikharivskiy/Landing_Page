@@ -111,3 +111,31 @@
     font-family: 'Proxima Nova Semibold';
     margin-bottom: 68px;
 }
+/* media for navbar */
+@media(max-width: 991px){
+    .navbar__mobile, .navbar__landline{
+        display: none;
+    }
+}
+@media(max-width: 576px){
+    .navbar__button{
+        display: none;
+    }
+    .navbar__text{
+        font-size: 16px;
+    }
+    .navbar__description{
+        font-size: 12px;
+    }
+}
+/* media for menu */
+@media(max-width: 576px){
+    .menu__nav{
+        height: 230px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .menu__link:first-child{
+        padding-top: 12px;
+    }
+}
