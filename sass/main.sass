@@ -1,0 +1,239 @@
+@import "_fonts.sass"
+@import "_grid.sass"
+@import "_colors.sass"
+@import "_interface.sass"
+
+/* header */
+.navbar
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background-color: #fff
+
+.navbar-wrap
+    display: flex
+    align-items: center
+    min-height: 80px
+    justify-content: space-between
+
+/* button */
+.menu-button
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background-color: transparent
+    border: none
+    border-right: 1px solid rgba(0,0,0,0.1)
+    border-left: 1px solid rgba(0,0,0,0.1)
+    height: 12vh
+    width: 70px
+    outline: none
+    cursor: pointer
+
+.menu-button__line
+    display: block
+    height: 3px
+    width: 20px
+    background-color: #89a9eb
+    margin: 2px 0
+
+/* menu */
+.menu
+    position: fixed
+    z-index: 0
+    top: 80px
+    left: 0
+    padding: 16px 0
+    width: 100%
+    background-color: $primary
+    transition: 0.4s
+    transform: translateY(-100%)
+
+.menu_active
+    transform: translateY(0)
+
+.menu__nav
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+.menu__link
+    text-transform: uppercase
+    font-size: 17px
+    text-decoration: none
+    color: #ffffff
+
+/* navbar */
+.navbar__text
+    display: block
+    font-size: 18px
+    font-family: 'Proxima Nova Semibold'
+    text-transform: uppercase
+    margin-bottom: 5px
+
+.navbar__description
+    display: block
+    font-size: 14px
+    color: $text-color-light
+
+.navbar__phone
+    display: block
+    font-size: 19px
+    font-family: 'Proxima Nova Semibold'
+    text-decoration: none
+    color: $text-color
+    margin-bottom: 5px
+
+.navbar__mobile, .navbar__landline
+    text-align: right
+
+.navbar__small-text
+    font-size: 14px
+    color: $text-color
+    text-decoration: none
+    display: block
+
+/* hero */
+.hero
+    background: #1f1f1f url('../img/rumyniya_gory_kamni_nebo_derevya_107346_1366x768.jpg') no-repeat center
+    background-size: cover
+    padding: 200px 0 270px 0
+
+.hero-title
+    font-size: 30px
+    margin-bottom: 40px
+
+.hero-subtitle
+    display: block
+    font-size: 30px
+    font-family: 'Proxima Nova Semibold'
+    margin-bottom: 68px
+
+/* media for navbar */
+@media(max-width: 991px)
+    .navbar__mobile, .navbar__landline
+        display: none
+    
+
+@media(max-width: 576px)
+    .navbar__button
+        display: none
+    
+    .navbar__text
+        font-size: 16px
+    
+    .navbar__description
+        font-size: 12px
+    
+
+/* media for menu */
+@media(max-width: 576px)
+    .menu__nav
+        height: 230px
+        flex-direction: column
+        justify-content: space-around
+    
+    .menu__link:first-child
+        padding-top: 12px
+    
+
+/* main */
+/* offer */
+.offer
+    background-color: $bg-secondary
+    padding: 129px 0
+
+.offer__block 
+    margin-top: -200px
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1)
+
+.offer-block
+    background-color: #ffffff
+    padding: 80px
+
+.offer__title
+    font-size: 25px
+    text-transform: uppercase
+    font-weight: bold
+    margin-bottom: 20px
+
+.offer__subtitle
+    font-size: 21px
+    display: block
+    margin-bottom: 48px
+
+.form__row
+    display: flex
+    align-items: center
+    max-width: 900px
+    margin-bottom: 25px
+
+.form__row:last-child
+    margin-bottom: 0
+
+.form__group
+    width: 100%
+
+.form-label
+    display: block
+    font-size: 17px
+    margin-bottom: 15px
+
+.checkbox-label
+    display: flex
+    align-items: center
+    margin-right: 40px
+    user-select: none
+
+.checkbox-label:hover
+    cursor: pointer
+
+.checkbox-label::before
+    content: ''
+    width: 30px
+    height: 30px
+    border: 1px solid #dddddd
+    margin-right: 20px
+
+.form__input
+    border-right-width: none
+    flex-basis: 33.33%
+    width: 100%
+
+.form__input:last-child
+    border-right-width: 1px
+
+.form__button
+    height: 80px
+    width: 100%
+
+@media(max-width: 768px)
+    .form__row
+        flex-direction: column
+    
+    .form__input, .form__button
+        margin-bottom: 10px
+// features
+.features
+    &-block
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        &__item
+            flex-basis: 33.33%
+            text-align: center
+            margin-bottom: 100px
+
+@media (max-width: 991px)
+    .features
+        &-block
+            &__item
+                flex-basis: 50%
+
+@media (max-width: 768px)
+    .features
+        &-block
+            &__item
+                flex-basis: 100%
